@@ -1,0 +1,6 @@
+{
+    "html.format.indentInnerHtml": true,
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true
+}
