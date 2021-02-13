@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { auth } from "./Firebase";
 
 function Login() {
-  const history = useHistory(); 
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,31 +13,28 @@ function Login() {
 
     auth
       .signInWithEmailAndPassword(email, password)
-      .then(auth =>{
-        history.push('/')
+      .then((auth) => {
+        history.push("/");
       })
 
-      .catch(error => alert(error.message))
-
+      .catch((error) => alert(error.message));
   };
 
-  const register = e => {
+  const register = (e) => {
     e.preventDefault();
 
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-      // succesfully created a authenciate user and below code reroute to the home page
-
+        // succesfully created a authenciate user and below code reroute to the home page
 
         console.log(auth);
-          if (auth) {
-            history.push('/')
-          }
+        if (auth) {
+          history.push("/");
+        }
       })
 
       .catch((error) => alert(error.message));
-
   };
 
   return (
