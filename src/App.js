@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import "./app.css";
 import Header from "./Header";
 import Home from "./Home";
@@ -28,6 +29,7 @@ function App() {
         });
       }
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Router>
